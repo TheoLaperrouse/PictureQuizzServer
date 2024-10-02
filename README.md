@@ -9,8 +9,3 @@ Picture Quizz Server est un serveur pour une application de quiz multijoueur, ut
 - **Node.js** : Environnement d'exécution pour JavaScript côté serveur.
 - **Express** : Framework web pour Node.js pour faciliter la création de serveurs.
 - **Socket.IO** : Librairie permettant la communication en temps réel entre le client et le serveur via WebSockets.
-
-## Prérequis
-
-- Node.js (version 14 ou supérieure)
-- npm (gestionnaire de paquets pour Node.js)
