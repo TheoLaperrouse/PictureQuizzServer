@@ -1,36 +1,47 @@
 {
-  "name": "picture-game-server",
-  "version": "1.0.0",
-  "main": "server.js",
-  "type": "module",
-  "scripts": {
-    "start": "node app.js"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "socket.io": "^4.6.1"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.11.1",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "@trivago/prettier-plugin-sort-imports": "4.3.0",
-    "@vue/eslint-config-prettier": "9.0.0",
-    "eslint": "^9.11.1",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "5.0.1",
-    "globals": "^15.10.0",
-    "husky": "^9.1.5",
-    "lint-staged": "^15.2.9",
-    "prettier": "3.3.3",
-    "semantic-release": "^24.1.1"
-  },
-  "lint-staged": {
-    "*.{js,ts,vue}": [
-      "eslint --fix"
-    ]
-  },
-  "license": "MIT"
+    "name": "picture-game-server",
+    "version": "1.0.0",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "start": "tsx src/index.ts",
+        "dev": "tsx --respawn src/index.ts",
+        "lint": "eslint ."
+    },
+    "dependencies": {
+        "@prisma/client": "^5.20.0",
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "socket.io": "^4.6.1",
+        "tsx": "^4.19.1"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.11.1",
+        "@semantic-release/changelog": "^6.0.3",
+        "@semantic-release/git": "^10.0.1",
+        "@trivago/prettier-plugin-sort-imports": "4.3.0",
+        "@types/express": "^5.0.0",
+        "@types/socket.io": "^3.0.2",
+        "@typescript-eslint/eslint-plugin": "^8.8.0",
+        "@typescript-eslint/parser": "^8.8.0",
+        "@vue/eslint-config-prettier": "9.0.0",
+        "eslint": "^9.11.1",
+        "eslint-config-prettier": "9.1.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "5.0.1",
+        "globals": "^15.10.0",
+        "husky": "^9.1.5",
+        "lint-staged": "^15.2.9",
+        "prettier": "3.3.3",
+        "prisma": "^5.20.0",
+        "semantic-release": "^24.1.1",
+        "typescript": "^5.6.2",
+        "typescript-eslint": "^8.8.0"
+    },
+    "lint-staged": {
+        "*.{js,ts,vue}": [
+            "eslint --fix"
+        ]
+    },
+    "license": "MIT"
 }
