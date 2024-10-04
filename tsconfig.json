@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ES2023",
+        "skipLibCheck": true,
+        "noImplicitAny": false,
+        "noUnusedParameters": false,
+        "noUnusedLocals": true,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "esModuleInterop": true,
+        "paths": {
+            "@/*": ["src/*"],
+            "*": ["node_modules/*", "src/types/*"]
+        },
+        "plugins": [
+            {
+                "name": "tslint-language-service"
+            }
+        ]
+    }
+}
