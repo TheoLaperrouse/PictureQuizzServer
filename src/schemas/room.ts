@@ -1,5 +1,5 @@
 import * as z from "zod"
-import { CompleteUser, RelatedUserModel } from "./index"
+import { CompleteUser, RelatedUserModel, CompleteGame, RelatedGameModel } from "./index"
 
 export const RoomModel = z.object({
   id: z.number().int(),
@@ -10,6 +10,7 @@ export const RoomModel = z.object({
 
 export interface CompleteRoom extends z.infer<typeof RoomModel> {
   users: CompleteUser[]
+  game?: CompleteGame | null
 }
 
 /**
@@ -19,4 +20,5 @@ export interface CompleteRoom extends z.infer<typeof RoomModel> {
  */
 export const RelatedRoomModel: z.ZodSchema<CompleteRoom> = z.lazy(() => RoomModel.extend({
   users: RelatedUserModel.array(),
+  game: RelatedGameModel.nullish(),
 }))

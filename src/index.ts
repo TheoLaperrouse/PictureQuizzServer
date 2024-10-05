@@ -9,7 +9,7 @@ const server = http.createServer(app);
 
 app.use(
     cors({
-        origin: 'http://localhost:8080',
+        origin: '*',
         methods: ['GET', 'POST'],
     }),
 );
