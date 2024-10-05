@@ -3,9 +3,10 @@ generator client {
 }
 
 generator zod {
-  provider                 = "zod-prisma"
-  relationModel            = true
-  modelCase                = "PascalCase"
+  provider      = "zod-prisma"
+  relationModel = true
+  modelCase     = "PascalCase"
+  output        = "../src/schemas"
 }
 
 datasource db {
